@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Sum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter A Integer: ");
+        int N = sc.nextInt();
+        int evenSum = 0, oddSum = 0;
+        while (N > 0) {
+            int digit = N % 10;
+            if (digit % 2 == 0) {
+                evenSum += digit;
+            } else {
+                oddSum += digit;
+            }
+            N=N/10;
+        }
+        System.out.println("Sum of all even digits: " + evenSum);
+        System.out.println("Sum of all odd digits: " + oddSum);
+    }
+}
